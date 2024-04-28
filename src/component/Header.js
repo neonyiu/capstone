@@ -3,8 +3,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Col from 'react-bootstrap/Col';
 
 const items = [
-    {label: "HOME", path: "#home"},
-    {label: "ABOUT", path: "#about"},
+    {label: "HOME", path: "/home"},
+    {label: "ABOUT", path: "/about"},
     {label: "MENU", path: "/menu"},
     {label: "RESERVATION", path: "/reservation"},
     {label: "ORDER ONLINE", path: "/order"},
@@ -13,7 +13,7 @@ const items = [
 const NavItems = () => {
 
   return (
-    <Navbar expand="lg" className="bg-body-tertiary header justify-content-lg-center">
+    <Navbar expand="lg" className="header justify-content-lg-center">
             <Col lg={2}>
                 <Navbar.Brand href="#home">
                     <img src="Logo.svg" alt="Little Lemon logo"/>
@@ -22,8 +22,8 @@ const NavItems = () => {
             <Col lg={6}>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav col-lg-6">
-                <Nav className="me-auto">
-                    {items.map(i => (<Nav.Link href={i.path} key={i.label}>{i.label}</Nav.Link>))}
+                <Nav className="d-flex justify-content-between w-100">
+                    {items.map(i => (<Nav.Link className="lg" href={i.path} key={i.label}>{i.label}</Nav.Link>))}
                 </Nav>
                 </Navbar.Collapse>
             </Col>

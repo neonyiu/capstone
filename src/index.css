@@ -1,30 +1,32 @@
 body {
-  width: 100vw;
   margin: 0;
+  width: 100vw;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-left: 0px !important;
-  padding-right: 0px !important;
+}
+
+section {
+  padding-left: 70px !important;
+  padding-right: 70px !important;
 }
 
 .header {
   height: 200px;
   width: 100%;
+  padding-left: 70px !important;
+  padding-right: 70px !important;
 }
+
+a {
+  text-decoration: none !important;
+}
+
 
 .hero {
-  height: 500px;
-}
-
-.highlights {
-  height: 630px;
-}
-
-.testimonial {
-  height: 690px;
+  margin-bottom: 4rem;
 }
 
 .about {
@@ -39,3 +41,39 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas;
 }
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 700 */
+
+/* .markazi-text-<uniquifier> {
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+.markazi-text-h {
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.markazi-text-l {
+  font-family: "Markazi Text", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* // <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 200 to 800
+
+.karla-<uniquifier> {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+

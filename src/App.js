@@ -1,14 +1,13 @@
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
 import Header from './component/Header';
 import Main from './component/Main';
 
 function App() {
   return (
-    <>
+    <div id="grid-container">
       <Header/>
       <Main/>
-    </>
+    </div>
   );
 }
 
