@@ -30,7 +30,7 @@ a {
 }
 
 .about {
-  height: 500px;
+  margin-bottom: 4rem;
 }
 
 .footer {
@@ -75,5 +75,3 @@ code {
   font-weight: <weight>;
   font-style: normal;
 } */
-
-

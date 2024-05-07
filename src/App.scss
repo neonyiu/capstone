@@ -24,3 +24,9 @@ $display-font-sizes: (
 );
 
 @import '~bootstrap/scss/bootstrap';
+
+@include media-breakpoint-up(md) {
+  footer h6 {
+    height: 3rem;
+  }
+}

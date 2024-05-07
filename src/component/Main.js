@@ -79,12 +79,12 @@ const Main = () => {
                 </Col>
             </Row>
             <Row className="justify-content-md-center mt-4 pb-5">
-                <Col md={8} className="d-flex flex-wrap justify-content-between pb-5">
+                <Col md={8} className="d-flex flex-wrap justify-content-center pb-5">
                 {
                     highlightsCards.map(i => (
-                            <Card className="px-0 pt-2" style={{ width: '16rem'}}>
+                            <Card className="px-0 mt-3 mx-3" style={{ width: '16rem'}}>
                             <Card.Img variant="top" src={ i.image || "holder.js/100px180"} style={{ height: '11rem' }}/>
-                            <Card.Body style={{height: "14rem"}}>
+                            <Card.Body style={{height: "16rem"}}>
                                 <Card.Title>{i.name}</Card.Title>
                                 <Card.Text>
                                 {i.description}
@@ -102,14 +102,14 @@ const Main = () => {
                 Testimontials
             </h3>
             <Row className="justify-content-md-center mt-4 pb-5">
-                <Col md={8} className="d-flex flex-wrap justify-content-between pb-5">
+                <Col md={8} className="d-flex flex-wrap justify-content-center pb-5">
                 {
                     testimonialsCards.map(i => (
-                            <Card className="px-0 pt-2" style={{ width: '12rem'}}>
+                            <Card className="px-0 pt-2 mx-2 mt-2" style={{ width: '12rem'}}>
                             <Card.Body style={{height: "12rem"}}>
                                 <Row>
                                     <Col>
-                                    {Array.from(Array(i.star).keys()).map(_ => <img src={starImage} class="img-fluid d-inline-block" alt="star" style={{ width: '1rem', height: "auto"}}/>)}
+                                    {Array.from(Array(i.star).keys()).map(_ => <img src={starImage} className="img-fluid d-inline-block mb-2" alt="star" style={{ width: '1rem', height: "auto"}}/>)}
                                     </Col>
                                 </Row>
                                 <Row>
@@ -120,7 +120,7 @@ const Main = () => {
                                         {i.name}
                                     </Col>
                                 </Row>
-                                <Card.Link href="#">Review page</Card.Link>
+                                <Card.Link href="#" className="pt-2" style={{textDecoration: "none", color: "black"}}>Review page</Card.Link>
                             </Card.Body>
                             </Card>
                     ))
@@ -141,11 +141,11 @@ const Main = () => {
             </Row>
         </section>
         </main>
-        <footer className="container footer">
-            <Row className="justify-content-md-center gx-1">
+        <footer className="container footer px-4">
+            <Row className="justify-content-center gx-1">
                 <Col md={2}><img src={logoImage} class="img-fluid" alt="Little lemon logo" style={{ width: "7rem" }}/></Col>
                 <Col md={2} className="pt-1-md">
-                    <h6 style={{ height: "3rem" }}>Doormat<br/>Navigation</h6>
+                    <h6>Doormat<br/>Navigation</h6>
                     <Link href="#" label="Home"/>
                     <Link href="#" label="About"/>
                     <Link href="#" label="menu"/>
@@ -154,13 +154,13 @@ const Main = () => {
                     <Link href="#" label="Login"/>
                 </Col>
                 <Col md={2}>
-                    <h6 style={{ height: "3rem" }}>Contact</h6>
+                    <h6>Contact</h6>
                     <Link href="#" label="Addres"/>
                     <Link href="#" label="phone number"/>
                     <Link href="#" label="email"/>
                 </Col>
                 <Col md={2}>
-                    <h6 style={{ height: "3rem" }}>Social media link</h6>
+                    <h6>Social media link</h6>
                     <Link href="#" label="Facebook"/>
                     <Link href="#" label="Instagram"/>
                 </Col>
