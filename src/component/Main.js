@@ -5,7 +5,7 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
-import { Reservation } from "./Reservation";
+import { BookingForm } from "./BookingForm";
 import { ReactComponent as MotorSvg } from '../assets/bike-delivery-icon.svg';
 import bruchettaImage from "../assets/bruchetta.svg";
 import chanImage from "../assets/chan.png";
@@ -53,11 +53,12 @@ const testimonialsCards = [
 
 const Main = () => {
     const [showReservation, setShowReservation] = useState(false);
+    const [availableTimes, setAvailableTimes] = useState(['16:00:-18:00', '18:00-20:00', '20:00-22:00']);
 
     return (
         <>
         <main className="Container gx-1">
-        <Reservation show={showReservation} setShow={setShowReservation}/>
+        <BookingForm show={showReservation} setShow={setShowReservation} availableTimes={availableTimes}/>
         <section className="hero">
             <Row className="justify-content-md-center">
                 <Col md={4} className="d-flex align-items-start flex-column mb-2">

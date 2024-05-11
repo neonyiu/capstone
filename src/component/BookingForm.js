@@ -6,8 +6,8 @@ import Row from "react-bootstrap/Row";
 import Modal from 'react-bootstrap/Modal';
 import restaurantImage from "../assets/restaurant.png";
 
-export const Reservation = (props) => {
-    const {show, setShow} = props;
+export const BookingForm = (props) => {
+    const {show, setShow, availableTimes} = props;
     const [validated, setValidated] = React.useState(false);
 
     const handleSubmit = (event) => {
@@ -42,7 +42,12 @@ export const Reservation = (props) => {
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="time">
                         <Form.Label>Select a time</Form.Label>
-                        <Form.Control type="time" step="900" required/>
+                        <Form.Select aria-label="select time" required>
+                            <option>Select time</option>
+                            {
+                                availableTimes.map(i => <option value={i} key={i}>{i}</option>)
+                            }
+                        </Form.Select>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="dinerNum">
                         <Form.Label>Select number of diner(s)</Form.Label>
