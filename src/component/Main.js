@@ -53,12 +53,12 @@ const testimonialsCards = [
 
 const Main = () => {
     const [showReservation, setShowReservation] = useState(false);
-    const [availableTimes, setAvailableTimes] = useState(['16:00:-18:00', '18:00-20:00', '20:00-22:00']);
+    const [availableTimes, setAvailableTimes] = useState(['16:00-18:00', '18:00-20:00', '20:00-22:00'])å;
 
     return (
         <>
         <main className="Container gx-1">
-        <BookingForm show={showReservation} setShow={setShowReservation} availableTimes={availableTimes}/>
+        <BookingForm show={showReservation} setShow={setShowReservation} availableTimes={availableTimes} onSubmit={(ev) => {}}/>
         <section className="hero">
             <Row className="justify-content-md-center">
                 <Col md={4} className="d-flex align-items-start flex-column mb-2">

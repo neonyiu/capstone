@@ -7,8 +7,8 @@ import Modal from 'react-bootstrap/Modal';
 import restaurantImage from "../assets/restaurant.png";
 
 export const BookingForm = (props) => {
-    const {show, setShow, availableTimes} = props;
-    const [validated, setValidated] = React.useState(false);
+    const {show, setShow, availableTimes, onSubmit} = props;
+    const [validated, setValidated] = React.useState(true);
 
     const handleSubmit = (event) => {
       const form = event.currentTarget;
@@ -18,6 +18,7 @@ export const BookingForm = (props) => {
       }
 
       setValidated(true);
+      onSubmit(event);
     };
 
     return (
@@ -28,7 +29,7 @@ export const BookingForm = (props) => {
         <Modal.Body>
             <Row className="justify-content-md-center">
                 <Col md={8}>
-                    <img src={restaurantImage} class="img-fluid d-inline-block w-100 " alt="restaurant"/>
+                    <img src={restaurantImage} className="img-fluid d-inline-block w-100 " alt="restaurant"/>
                 </Col>
                 <h3 className="text-center mt-4 markazi-text-l text-info">
                     Reservations
@@ -45,7 +46,7 @@ export const BookingForm = (props) => {
                         <Form.Select aria-label="select time" required>
                             <option>Select time</option>
                             {
-                                availableTimes.map(i => <option value={i} key={i}>{i}</option>)
+                                 availableTimes && availableTimes.map(i => <option value={i} key={i}>{i}</option>)
                             }
                         </Form.Select>
                     </Form.Group>
